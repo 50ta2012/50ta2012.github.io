@@ -16,7 +16,7 @@ main {
 }
 
 body {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 h1 {
@@ -45,4 +45,8 @@ h1 {
 
 .sidenav a:hover {
     color: #000000;
+}
+
+.prettyprint{
+    padding: 0.5em !important;
 }

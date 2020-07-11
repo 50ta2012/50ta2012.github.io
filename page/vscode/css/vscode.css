@@ -1,6 +1,5 @@
 pre {
     background-color: #fafafa;
-    padding: 1em;
 }
 
 pre code {
@@ -11,42 +10,28 @@ pre code {
 main {
     padding-left: 1em;
     padding-right: 1em;
-    /* margin-left: 200px; */
-    /* Same as the width of the sidenav */
 }
 
-code {
+code.highlight {
     background-color: #e4e6e8;
+    font-family: Monaco;
+    font-size: 18px;
 }
 
 body {
-    font-size: 22px;
-}
-
-h1 {
-    padding-bottom: 1em;
-}
-
-/* .sidenav {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidenav a {
-    padding: 6px 6px 6px 32px;
-    text-decoration: none;
     font-size: 20px;
-    color: #818181;
-    display: block;
 }
 
-.sidenav a:hover {
-    color: #000000;
-} */
+h2 {
+    padding-top: 1em;
+}
+
+h3 {
+    padding-top: 1em;
+    font-weight: 550;
+    font-style: italic;
+}
+
+.prettyprint{
+    padding: 0.5em !important;
+}
