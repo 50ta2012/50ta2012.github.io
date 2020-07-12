@@ -16,7 +16,14 @@
 
 <body>
     <main>
-        <a href="/">回首頁</a>
+        <header id="header">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="/">
+                    <img src="/image/logo.svg" alt="my-logo" width="50%" height="50%">
+                </a>
+            </nav>
+        </header>
+        
         <h1>VS-code 小技巧</h1>
 
         <h2>前言</h2>
@@ -38,7 +45,7 @@
             python 3.5 的環境，再用上面的方法切換 vs-code 的 python 環境即可。</p>
 
         <p>設定好環境之後，在 python code 的上方加入 <code class="highlight">#%%</code>：</p>
-        
+
         <pre class="prettyprint"><code>#%%
 import matplotlib.pyplot as plt
 plt.plot([1, 2, 3, 4])
