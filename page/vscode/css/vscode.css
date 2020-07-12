@@ -16,6 +16,7 @@ code.highlight {
     background-color: #e4e6e8;
     font-family: Monaco;
     font-size: 18px;
+    padding: 0.2em;
 }
 
 body {
@@ -26,10 +27,10 @@ h2 {
     padding-top: 1em;
 }
 
-h3 {
+h4 {
     padding-top: 1em;
-    font-weight: 550;
-    font-style: italic;
+    font-weight: bold;
+    /* font-style: italic; */
 }
 
 .prettyprint{
