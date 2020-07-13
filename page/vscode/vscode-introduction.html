@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS-code 的小技巧</title>
+    <title>VS-code 小知識</title>
     <script type="text/javascript" src="/webjars/jquery/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
     <!-- bootstrap dropdown manu need "bootstrap.bundle" -->
@@ -15,24 +15,23 @@
 </head>
 
 <body>
-    <main>
-        <header id="header">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="/">
-                    <img src="/image/logo.svg" alt="my-logo" width="50%" height="50%">
-                </a>
-            </nav>
-        </header>
+    <header class="header">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="/">
+                <img src="/image/logo.svg" alt="my-logo" width="50%" height="50%">
+            </a>
+        </nav>
+    </header>
 
-        <h1>VS-code 小技巧</h1>
+    <main>
+        <h1>VS-code 小知識</h1>
 
         <h2>前言</h2>
 
         <p>VS-code (visual studio code) 是一款由微軟開發的程式編譯器，同時支援 Windows、MacOS 和 Linux
-            作業系統、開放原始碼以及很多的擴充套件可以使用，像是：預先偵錯、自動完成和預覽頁面等功能。</p>
+            作業系統、開放原始碼以及有相當多元的擴充套件可以使用，像是：預先偵錯、自動完成和預覽頁面等功能。</p>
 
-        <p>大學時期上程式課，老師就讓同學使用 Visual Studio 2010，當時用起來就覺得很笨重，一直對微軟的程式編譯器沒什麼好感。直到最近因緣又接觸到 VS-code 感到驚為天人，過去在用 Atom 一直被一些
-            Bug 困擾，現在使用 VS-code 有一種通體舒暢的感覺。</p>
+        <p>大學時期上程式課老師就讓同學使用 Visual Studio 2010 光是安裝容量就佔了 1G 左右，用起來覺得很笨重，從一開始就對微軟的程式編譯器沒什麼好感。直到最近接觸到 VS-code 簡直驚為天人，正當我被 Atom 的某些 Bug 一直困擾時， VS-code 一掃陰霾，展現其輕量、套件豐富和品質良好的優點，最重要的 VS-code 同時是一款開源的免費軟體。</p>
 
         <h2>Python Extension</h2>
         <h4>變更環境</h4>
@@ -42,7 +41,8 @@
         <h4>用 Jupyter 跑 VS-code 上的 python code</h4>
 
         <p>因為 Jupyter 只適用 python 3.5 的版本，要更換系統上的套件版本可以說是大費周張的工程。這裡推薦 "Condaー系統環境管理" 可以生成任意組成的系統環境並且隨時切換，用 Conda 建立一個
-            python 3.5 的環境，再用上面的方法切換 vs-code 的 python 環境即可。設定好環境之後，在 python code 的上方加入 <code class="highlight">#%%</code>：</p>
+            python 3.5 的環境，再用上面的方法切換 vs-code 的 python 環境即可。設定好環境之後，在 python code 的上方加入 <code
+                class="highlight">#%%</code>：</p>
 
         <pre class="prettyprint"><code>#%%
 import matplotlib.pyplot as plt

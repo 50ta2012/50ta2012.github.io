@@ -9,8 +9,9 @@ pre code {
 }
 
 main {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 1em;
+    /* padding-left: 1em; */
+    /* padding-right: 1em; */
     margin-left: 200px;
     /* Same as the width of the sidenav */
 }
@@ -28,25 +29,43 @@ h1 {
     width: 200px;
     position: fixed;
     z-index: 1;
-    top: 80px;
+    top: 74px;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #f8f9fa!important;
     overflow-x: hidden;
-    padding-top: 20px;
+    /* padding-top: 10px; */
+    border-style: groove;
+    border-width: 0.05em;
+    border-top: none;
+    border-color: #fdfdfd;
 }
 
-.sidenav a {
-    padding: 6px 6px 6px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
+.sidenav button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 17px;
+    width: 100%;
+    text-align: left;
 }
 
-.sidenav a:hover {
-    color: #000000;
+.sidenav button:hover {
+    background-color: #ddd;
 }
 
-.prettyprint{
+.sidenav button.active {
+    background-color: #ccc;
+}
+
+.prettyprint {
     padding: 0.5em !important;
+}
+
+.header {
+    border-style: groove;
+    border-width: 0.05em;
+    border-color: #fdfdfd;
 }
