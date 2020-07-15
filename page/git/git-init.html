@@ -1,0 +1,33 @@
+<main>
+    <h1>開始版本控制</h1>
+
+<p>建立一個資料夾，並且初始化這個目錄，讓 Git 對這個目錄開始進行版本控制：</p>
+
+<div class="code-block">
+<pre class="prettyprint"><code>$ mkdir git-practice
+$ cd git-practice
+$ git init
+</code></pre>
+</div>
+
+<p>在資料夾內建立檔案或者修改檔案，完成一個段落之後可以將所有更動過的檔案加入暫存區：</p>
+
+<div class="code-block">
+<pre class="prettyprint"><code>$ git add --all</code></pre>
+</div>
+
+<p>用 <code class="highlight">git commit</code> 指令將暫存區的內容放入儲存庫，參數 <code class="highlight">-m</code> 可以說明這次 commit 的內容：</p>
+
+<div class="code-block">
+<pre class="prettyprint"><code>$ git commit -m "我增加了 ooo, 改了 xxx 呦！"
+</code></pre>
+</div>
+
+<p><img src="/image/git/git-repository.jpg" alt="git-repository" width="40%" height="40%"></p>
+
+<p>檢示版本記錄：</p>
+<div class="code-block">
+<pre class="prettyprint"><code>$ git log --oneline
+</code></pre>    
+</div>
+</main>

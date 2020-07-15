@@ -1,6 +1,9 @@
 pre {
     background-color: #fafafa;
-    padding: 1em;
+}
+
+div.code-block{
+    padding-bottom: 20px;
 }
 
 pre code {
@@ -68,4 +71,22 @@ h1 {
     border-style: groove;
     border-width: 0.05em;
     border-color: #fdfdfd;
+}
+
+code.highlight {
+    background-color: #e4e6e8;
+    font-family: Monaco;
+    font-size: 18px;
+    padding: 0.2em;
+}
+
+div.tab-content{
+    height: 90%;
+    overflow: scroll;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
 }
