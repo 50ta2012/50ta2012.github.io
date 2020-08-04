@@ -1,0 +1,78 @@
+body {
+    font-size: 20px;
+}
+
+h1 {
+    padding-bottom: 1em;
+}
+
+.header {
+    grid-area: header;
+    background-color: #f8f9fa !important;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #f8f9fa !important;
+}
+
+.main {
+    grid-area: main;
+}
+
+.right {
+    grid-area: right;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'menu main main main main main';
+    grid-gap: 2px;
+    /* Grid color */
+    background-color: #dddddd;
+    grid-template-columns: 200px auto;
+}
+
+/* Element in grid */
+.grid-container>div {
+    /* background-color: rgba(255, 255, 255, 2.0); */
+    background-color: #ffffff;
+    /* text-align: center; */
+    /* font-size: 30px; */
+}
+
+.grid-container .header {
+    padding: 10px;
+}
+
+.grid-container .menu {
+    padding: 0px;
+}
+
+.grid-container .main {
+    padding: 1em;
+}
+
+.menu button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 17px;
+    width: 100%;
+    text-align: left;
+}
+
+.menu button:hover {
+    background-color: #ddd;
+}
+
+.menu button.active {
+    background-color: #ccc;
+}
