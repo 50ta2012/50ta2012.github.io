@@ -1,0 +1,92 @@
+pre {
+    background-color: #fafafa;
+}
+
+div.code-block{
+    padding-bottom: 20px;
+}
+
+pre code {
+    font-size: 16px;
+    font-family: Monaco;
+}
+
+main {
+    padding: 1em;
+    /* padding-left: 1em; */
+    /* padding-right: 1em; */
+    margin-left: 200px;
+    /* Same as the width of the sidenav */
+}
+
+body {
+    font-size: 20px;
+}
+
+h1 {
+    padding-bottom: 1em;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 74px;
+    left: 0;
+    background-color: #f8f9fa!important;
+    overflow-x: hidden;
+    /* padding-top: 10px; */
+    border-style: groove;
+    border-width: 0.05em;
+    border-top: none;
+    border-color: #fdfdfd;
+}
+
+.sidenav button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 17px;
+    width: 100%;
+    text-align: left;
+}
+
+.sidenav button:hover {
+    background-color: #ddd;
+}
+
+.sidenav button.active {
+    background-color: #ccc;
+}
+
+.prettyprint {
+    padding: 0.5em !important;
+}
+
+.header {
+    border-style: groove;
+    border-width: 0.05em;
+    border-color: #fdfdfd;
+}
+
+code.highlight {
+    background-color: #e4e6e8;
+    font-family: Monaco;
+    font-size: 18px;
+    padding: 0.2em;
+}
+
+div.tab-content{
+    height: 90%;
+    overflow: scroll;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}

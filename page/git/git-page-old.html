@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Git 版本控制</title>
+
+    <script type="text/javascript" src="/webjars/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+    <link rel="stylesheet" href="css/git-page-old.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="/">
+                <img src="/image/logo.svg" alt="my-logo" width="50%" height="50%">
+            </a>
+        </nav>
+        <script>
+            function loadTabContent(id) {
+                var id = id;
+                var selector = "#" + id;
+                $(selector).on("click", function () {
+                    // 點擊分頁時在網址上增加 hashTag
+                    // location.hash = id;
+
+                    $('.tab-content').load(id + '.html');
+                });
+            }
+
+            $(function () {
+                // 重新整理時去除 hashTag
+                // if(window.location.hash != ""){
+                //     window.location.href = window.location.href.split('#')[0];
+                // }
+
+                // Highlight tab button
+                $('body').on('click', 'button', function () {
+                    $('button.active').removeClass('active');
+                    $(this).addClass('active');
+                });
+
+                // 取得所有分頁的 button id，並依序代入 loadTabContent 這個 function 
+                $('.sidenav').children('button').each(function (){  
+                    var id = $(this).attr('id');
+                    loadTabContent(id);
+                });
+            });
+        </script>
+    </header>
+
+    <div class="sidenav">
+        <button id="git-introduction">介紹</button>
+        <button id="git-config">使用者和信箱設定</button>
+        <button id="git-init">開始版本控制</button>
+
+    </div>
+    <div class="tab-content">
+        <div id="welcome">
+            <main>
+                <h1>歡迎</h1>
+                <p>這裡是 Git 版本控制頁面，點擊左側的按鈕前往分頁。</p>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

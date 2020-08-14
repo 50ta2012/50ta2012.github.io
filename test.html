@@ -11,49 +11,41 @@
     <title>Test</title>
 
     <style>
+        body {
+            overflow: hidden;
+        }
+
         .header {
-            grid-area: header;
-            background-color: #f8f9fa !important;
+            grid-column-end: span 2;
         }
 
         .menu {
-            grid-area: menu;
-            background-color: #f8f9fa !important;
+            grid-column-end: span 1;
         }
 
         .main {
-            grid-area: main;
+            /* grid-column-end: span 7; */
+            font-size: 24px;
+            overflow: auto;
         }
 
-        .right {
-            grid-area: right;
-        }
-
-        .footer {
-            grid-area: footer;
-        }
+        /* .footer{} */
 
         .grid-container {
             display: grid;
-            grid-template-areas:
-                'header header header header header header'
-                'menu main main main main main';
-            /* grid-gap: 0.05em; */
-            grid-gap: 2px;
-            /* Grid color */
-            background-color: #dddddd;
-
+            grid-template-columns: 30vh auto;
+            grid-template-rows: auto 100vh;
+            grid-gap: 10px;
+            background-color: #2196F3;
             /* padding: 10px; */
-
         }
 
         /* Element in grid */
         .grid-container>div {
-            /* background-color: rgba(255, 255, 255, 2.0); */
-
             background-color: #ffffff;
+            padding: 1em;
             /* text-align: center; */
-            padding: 10px;
+            /* padding: 5px; */
             /* font-size: 30px; */
         }
     </style>
@@ -61,29 +53,73 @@
 
 <body>
     <div class="grid-container">
-        <div class="header"">Header</div>
+        <div class="header">Header</div>
         <div class="menu">Menu</div>
-        <div class="main">Main</div>
-        <!-- <div class="right">Right</div>
-        <div class="footer">Footer</div> -->
+        <div class="main">
+
+            <p>Main</p>
+            Taiwan (Chinese: 臺灣/台灣; pinyin: Táiwān)[II], officially the Republic of China (ROC)[I] (see §Etymology),
+            is
+            a country in East Asia.[17][18] Neighbouring countries include the People's Republic of China (PRC) to
+            the
+            northwest, Japan to the northeast, and the Philippines to the south. The main island of Taiwan has an
+            area
+            of 35,808 square kilometres (13,826 sq mi), with mountain ranges dominating the eastern two-thirds and
+            plains in the western third, where its highly urbanised population is concentrated. Taipei is the de
+            facto
+            capital of the ROC and serves as its seat of government as well as largest metropolitan area. Other
+            major
+            cities include New Taipei, Kaohsiung, Taichung, Tainan and Taoyuan. With 23.7 million inhabitants,
+            Taiwan is
+            among the most densely populated countries, and is the most populous country and largest economy that is
+            not
+            a member of the United Nations (UN).
+
+            Taiwanese indigenous peoples settled the island of Taiwan around 6,000 years ago. In the 17th century,
+            partial Dutch colonization opened the island to mass[citation needed] Han immigration. After the brief
+            Kingdom of Tungning in parts of the southern and western areas of the island, the island was annexed in
+            1683
+            by the Qing dynasty of China, and ceded to the Empire of Japan in 1895. Following the surrender of Japan
+            in
+            1945, the Republic of China, which had overthrown and succeeded the Qing in 1911, took control of Taiwan
+            on
+            behalf of the World War II Allies. The resumption of the Chinese Civil War led to the loss of the
+            mainland
+            to the Communist Party of China and the flight of the ROC government to Taiwan in 1949. Although the ROC
+            government continued to claim to be the legitimate representative of China, since 1950 its effective
+            jurisdiction has been limited to Taiwan and numerous smaller islands. In the early 1960s, Taiwan entered
+            a
+            period of rapid economic growth and industrialisation called the "Taiwan Miracle". In the late 1980s and
+            early 1990s, the ROC transitioned from a one-party military dictatorship to a multi-party democracy with
+            a
+            semi-presidential system.
+
+            Taiwan's export-oriented industrial economy is the 21st-largest in the world, with major contributions
+            from
+            steel, machinery, electronics and chemicals manufacturing. Taiwan is a developed country,[19][20]
+            ranking
+            15th in GDP per capita. It is ranked highly in terms of political and civil liberties,[21] education,
+            health
+            care[22] and human development.[f][26]
+
+            The political status of Taiwan remains uncertain. The ROC is no longer a member of the UN, having been
+            replaced by the PRC in 1971. Taiwan is claimed by the PRC, which refuses diplomatic relations with
+            countries
+            that recognise the ROC. Taiwan maintains official ties with 14 out of 193 UN member states and the Holy
+            See.[27][28] International organisations in which the PRC participates either refuse to grant membership
+            to
+            Taiwan or allow it to participate only on a non-state basis. Taiwan is a member of the World Trade
+            Organization, Asia-Pacific Economic Cooperation and Asian Development Bank under various names. Nearby
+            countries and countries with large economies maintain unofficial ties with Taiwan through representative
+            offices and institutions that function as de facto embassies and consulates. Domestically, the major
+            political division is between parties favouring eventual Chinese unification and promoting a Chinese
+            identity contrasted with those aspiring to independence and promoting Taiwanese identity, although both
+            sides have moderated their positions to broaden their appeal.
+
+        </div>
+
+        <!-- <div class="footer">Footer</div>  -->
     </div>
-
-    <script>
-        autoResizeMain();
-
-        $(window).on('resize', function () {
-            autoResizeMain();
-        });
-
-        function autoResizeMain() {
-            var windowHeight = $(window).height();
-            var headerHeight = $(".header").height();
-            var mainOutside = $(".main").outerHeight() - $(".main").height();
-            var mainHeight = windowHeight - headerHeight - mainOutside;
-
-            $(".main").css("min-height", mainHeight);
-        }
-    </script>
 </body>
 
 </html>
