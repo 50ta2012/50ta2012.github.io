@@ -1,0 +1,44 @@
+<main>
+    <h1>合併分支</h1>
+
+    <p>檢示版本紀錄可以看到 <code class="highlight">cat</code> 和 <code class="highlight">master</code> 分別對應著不同的版本，而目前所在的分支(HEAD 所指)為 <code class="highlight">cat</code>：</p>
+    <div class="code-block">
+    <pre class="prettyprint"><code>$ git log --oneline
+
+5ed08fe (HEAD -> cat) add new file: dog
+4500955 add new file: cat
+560bb09 (master) add new file: apple
+3c68540 first commit</code></pre>
+    </div>
+
+    <p>移動到 <code class="highlight">master</code> 分支：</p>
+    <div class="code-block">
+    <pre class="prettyprint"><code>$ git checkout master</code></pre>
+    </div>
+
+    <p>這時候嘗試 merge <code class="highlight">cat</code> 分支到 <code class="highlight">master</code> 分支：</p>
+    <div class="code-block">
+    <pre class="prettyprint"><code>$ git merge cat
+
+Updating 560bb09..5ed08fe
+Fast-forward
+ cat.txt | 1 +
+ dog.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 cat.txt
+ create mode 100644 dog.txt
+
+$ git log --oneline
+
+5ed08fe (HEAD -> master, cat) add new file: dog
+4500955 add new file: cat
+560bb09 add new file: apple
+3c68540 first commit</code></pre>
+    </div>
+
+    <p>可以看到 <code class="highlight">master</code> 分支原本在版本號 <code class="highlight">560bb09</code> ， merge 之後移動到 <code class="highlight">5ed08fe</code> 和 <code class="highlight">cat</code> 分支同一個位置。其實分支就像是書籤，合併分支就如同把書籤 <code class="highlight">master</code> 放到書籤 <code class="highlight">cat</code> 所在的版本：</p>
+    
+    <p><img src="/image/git/git-merge-draw.png" alt="git-repository" width="40%" height="40%"></p>
+
+
+</main>
