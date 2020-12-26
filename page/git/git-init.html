@@ -28,6 +28,17 @@ $ git init
 <p>檢示版本記錄：</p>
 <div class="code-block">
 <pre class="prettyprint"><code>$ git log --oneline
-</code></pre>    
+</code></pre>
 </div>
+
+<p>[特殊] 追加檔案到最近一次的 Commit：</p>
+<div class="code-block">
+<pre class="prettyprint"><code># 追加檔案到最近一次的 commit
+$ git commit --amend --no-edit
+
+# 修改 commit 說明
+$ git commit --amend -m "YOUR_NEW_DESCRIPTION"
+</code></pre>
+</div>
+
 </main>
